@@ -3,7 +3,11 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [
-    HomeController::class,
-    "index"
-]);
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::resource('products', HomeController::class);
+
+
