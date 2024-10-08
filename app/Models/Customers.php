@@ -12,6 +12,6 @@ class Customers extends Model
         return $this->hasMany(Address::class, 'user_id');
     }
     public function account(){
-        return $this->belongsTo(Accounts::class, 'user_id');
+        return $this->belongsTo(Accounts::class, 'user_id','user_id');
     }
 }

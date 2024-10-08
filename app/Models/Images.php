@@ -9,7 +9,7 @@ class Images extends Model
 {
     use HasFactory;
     public function product(){
-        return $this->belongsTo(Products::class, 'product_id');
+        return $this->belongsTo(Products::class, 'product_id', 'product_id');
     }
 
 
