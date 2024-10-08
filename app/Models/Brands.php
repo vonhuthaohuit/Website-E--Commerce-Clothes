@@ -8,8 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Brands extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'brand_id',
+        'brand_name',
+        'country'
+    ];
     public function products(){
         return $this->hasMany(Products::class, 'brand_id');
     }
+    public $timestamps = false;
 
 }

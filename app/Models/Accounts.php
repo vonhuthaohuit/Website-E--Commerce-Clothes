@@ -9,9 +9,10 @@ class Accounts extends Model
 {
     use HasFactory;
     public function customer(){
-        return $this->belongsTo(Customers::class, 'user_id');
+        return $this->belongsTo(Customers::class, 'user_id','user_id');
     }
     public function infoAdmin(){
         return $this->hasOne(InfoAdmin::class, 'account_id');
     }
+
 }
